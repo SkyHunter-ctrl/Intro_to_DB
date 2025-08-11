@@ -1,5 +1,6 @@
 # A Magical Database for Your Dream Online Bookstore Adventure!
-CREATE DATABASE alx_book_store;
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+# Switch to the alx_book_store database
 USE alx_book_store;
 # Table for storing book details
 CREATE TABLE Books (
