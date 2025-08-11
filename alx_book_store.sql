@@ -17,15 +17,15 @@ CREATE TABLE Authors (
 );
 # Table for storing customer details
 CREATE TABLE Customers (
-    customer_id (Primary Key)
+    customer_id INT(Primary Key)
     customer_name VARCHAR(215)
     email VARCHAR(215)
     address TEXT
 );
 # Table for storing orders
 CREATE TABLE Orders (
-    order_id (Primary Key)
-    customer_id (Foreign Key referencing Customers table)
+    order_id INT(Primary Key)
+    customer_id INT(Foreign Key referencing Customers table)
     order_date DATE
 );
 # Table for storing order details
