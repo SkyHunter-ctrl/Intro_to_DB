@@ -1,0 +1,37 @@
+# A Magical Database for Your Dream Online Bookstore Adventure!
+CREATE DATABASE alx_book_store;
+USE alx_book_store;
+# Table for storing book details
+CREATE TABLE Books (
+    book_id INT PRIMARY KEY,
+    title VARCHAR(130) NOT NULL,
+    author_id VARCHAR(foreign key referencing Author table),
+    price DOUBLE,
+    publication_date DATE,
+);
+# Table for storing author details
+CREATE TABLE Authors (
+    author_id (Primary Key)
+    author_name VARCHAR(215)
+);
+# Table for storing customer details
+CREATE TABLE Customers (
+    customer_id (Primary Key)
+    customer_name VARCHAR(215)
+    email VARCHAR(215)
+    address TEXT
+);
+# Table for storing orders
+CREATE TABLE Orders (
+    order_id (Primary Key)
+    customer_id (Foreign Key referencing Customers table)
+    order_date DATE
+);
+# Table for storing order details
+CREATE TABLE Order_Details (
+    orderdetailid (Primary Key)
+    order_id (Foreign Key referencing Orders table)
+    book_id (Foreign Key referencing Books table)
+    quantity DOUBLE
+);
+
