@@ -36,5 +36,7 @@ CREATE TABLE Order_Details (
     order_id (Foreign Key referencing Orders table)
     book_id (Foreign Key referencing Books table)
     quantity DOUBLE
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
 
