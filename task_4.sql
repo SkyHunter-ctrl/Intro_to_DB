@@ -6,3 +6,14 @@ SHOW CREATE TABLE Books;
 # This will show the full structure of the Books table including columns, types, and constraints.
 SHOW COLUMNS FROM Books;
 # This will also provide detailed information about each column in the Books table.
+SELECT 
+    COLUMN_NAME,
+    COLUMN_TYPE,
+    IS_NULLABLE,
+    COLUMN_KEY,
+    EXTRA
+FROM 
+    INFORMATION_SCHEMA.COLUMNS
+WHERE 
+    TABLE_SCHEMA = DATABASE()
+    AND TABLE_NAME = 'Books';
